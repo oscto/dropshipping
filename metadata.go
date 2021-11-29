@@ -37,42 +37,43 @@ type (
 	}
 
 	ProductQueryResponse struct {
-		Code    int    `json:"code"`
-		Result  bool   `json:"result"`
-		Message string `json:"message"`
-		Data    struct {
-			Pid            string               `json:"pid"`
-			ProductName    string               `json:"productName"`
-			ProductNameEn  string               `json:"productNameEn"`
-			ProductSku     string               `json:"productSku"`
-			ProductImage   string               `json:"productImage"`
-			ProductWeight  string               `json:"productWeight"`
-			ProductUnit    string               `json:"productUnit"`
-			ProductType    string               `json:"productType"`
-			CategoryId     string               `json:"categoryId"`
-			CategoryName   string               `json:"categoryName"`
-			EntryCode      string               `json:"entryCode"`
-			EntryName      string               `json:"entryName"`
-			EntryNameEn    string               `json:"entryNameEn"`
-			MaterialName   string               `json:"materialName"`
-			MaterialNameEn string               `json:"materialNameEn"`
-			MaterialKey    string               `json:"materialKey"`
-			PackingWeight  string               `json:"packingWeight"`
-			PackingName    string               `json:"packingName"`
-			PackingNameEn  string               `json:"packingNameEn"`
-			PackingKey     string               `json:"packingKey"`
-			ProductKey     string               `json:"productKey"`
-			ProductKeyEn   string               `json:"productKeyEn"`
-			ProductPro     string               `json:"productPro"`
-			ProductProEn   []string             `json:"productProEn"`
-			SellPrice      string               `json:"sellPrice"`
-			SourceFrom     int                  `json:"sourceFrom"`
-			Description    string               `json:"description"`
-			Variants       []ProductVariantData `json:"variants"`
-			AddMarkStatus  int                  `json:"addMarkStatus"`
-			CreaterTime    time.Time            `json:"createrTime"`
-		} `json:"data"`
-		RequestId string `json:"requestId"`
+		Code      int         `json:"code"`
+		Result    bool        `json:"result"`
+		Message   string      `json:"message"`
+		Data      ProductData `json:"data"`
+		RequestId string      `json:"requestId"`
+	}
+	ProductData struct {
+		Pid            string               `json:"pid"`
+		ProductName    string               `json:"productName"`
+		ProductNameEn  string               `json:"productNameEn"`
+		ProductSku     string               `json:"productSku"`
+		ProductImage   string               `json:"productImage"`
+		ProductWeight  string               `json:"productWeight"`
+		ProductUnit    string               `json:"productUnit"`
+		ProductType    string               `json:"productType"`
+		CategoryId     string               `json:"categoryId"`
+		CategoryName   string               `json:"categoryName"`
+		EntryCode      string               `json:"entryCode"`
+		EntryName      string               `json:"entryName"`
+		EntryNameEn    string               `json:"entryNameEn"`
+		MaterialName   string               `json:"materialName"`
+		MaterialNameEn string               `json:"materialNameEn"`
+		MaterialKey    string               `json:"materialKey"`
+		PackingWeight  string               `json:"packingWeight"`
+		PackingName    string               `json:"packingName"`
+		PackingNameEn  string               `json:"packingNameEn"`
+		PackingKey     string               `json:"packingKey"`
+		ProductKey     string               `json:"productKey"`
+		ProductKeyEn   string               `json:"productKeyEn"`
+		ProductPro     string               `json:"productPro"`
+		ProductProEn   []string             `json:"productProEn"`
+		SellPrice      string               `json:"sellPrice"`
+		SourceFrom     int                  `json:"sourceFrom"`
+		Description    string               `json:"description"`
+		Variants       []ProductVariantData `json:"variants"`
+		AddMarkStatus  int                  `json:"addMarkStatus"`
+		CreaterTime    time.Time            `json:"createrTime"`
 	}
 	ProductVariantResponse struct {
 		Code      int                  `json:"code"`
